@@ -10,5 +10,6 @@ def sales_reports(log_file):
 
 #make function to remove trailing white spaces from the lines
 #changed from tues to mon on line 8
-#
+
 sales_reports(log_file)
+#this is to run the function
