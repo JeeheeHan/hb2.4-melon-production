@@ -2,7 +2,7 @@
 
 import customers 
 from random import choice
-import sys
+
 
 def get_random_customer(customers):
     """
@@ -10,22 +10,22 @@ def get_random_customer(customers):
     """
     lucky_customer = choice(customers)
 
-    print (f"Name: {lucky_customer.name}")
-    print (f"Email: {lucky_customer.email}")
-    print (f"Street: {lucky_customer.street}")
-    print (f"City: {lucky_customer.city}")
-    print (f"Zipcode: {lucky_customer.zipcode}")
+    return lucky_customer
 
 
+def print_winner():
+    """ Run and print the winner
+    """
+
+    lst_customers = customers.get_customers_from_file("customers.txt")
+    winner = get_random_customer(lst_customers)
+
+    print (f"Name: {winner.name}")
+    print (f"Email: {winner.email}")
+    print (f"Street: {winner.street}")
+    print (f"City: {winner.city}")
+    print (f"Zipcode: {winner.zipcode}")
 
 
-
-#call document in shell
-
-filenames = "customers.txt"
-#sys.argv[1:] was not working so putting direct file name
-
-#Return a lucky customer
-lst_customers = customers.get_customers_from_file(filenames)
-
-winner = get_random_customer(lst_customers)
+if __name__ == '__main__':
+    print_winner()
