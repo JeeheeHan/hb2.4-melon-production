@@ -1,0 +1,4 @@
+customers.txt
+env
+*.pyc
+.DS_Store
